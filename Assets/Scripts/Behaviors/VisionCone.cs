@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class VisionCone : MonoBehaviour
 {
-    [SerializeField] private AIbehaviorManager behaviorManager;
+    [SerializeField] private AIBehaviorManager behaviorManager;
     [SerializeField] private float viewAngle = 90f;
     [SerializeField] private int rayCount = 100;
     [SerializeField] private float viewDistance;

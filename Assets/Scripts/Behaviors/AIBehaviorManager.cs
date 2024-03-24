@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AIbehaviorManager : MonoBehaviour
+public class AIBehaviorManager : MonoBehaviour
 {
     [SerializeField] private List<AIBehaviorBase> Behaviors;
     [SerializeField] private Transform playerTransform;

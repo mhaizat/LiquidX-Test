@@ -8,11 +8,11 @@ public abstract class AIBehaviorBase : MonoBehaviour
 
     [SerializeField] private Color colorState;
 
-    protected AIbehaviorManager behaviorManager;
+    protected AIBehaviorManager behaviorManager;
 
     public virtual void Start()
     {
-        behaviorManager = GetComponent<AIbehaviorManager>();
+        behaviorManager = GetComponent<AIBehaviorManager>();
     }
 
     public virtual void Activate()
