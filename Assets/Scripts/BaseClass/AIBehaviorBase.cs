@@ -1,24 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public abstract class AIBehaviorBase : MonoBehaviour
 {
-    public string Key;
+    public string behaviorID;
     protected bool isActive;
-    [SerializeField] private Material agentMaterial;
 
-    protected AIBehaviorManager BehaviorManager;
+    [SerializeField] private Color colorState;
+
+    protected AIbehaviorManager behaviorManager;
 
     public virtual void Start()
     {
-        BehaviorManager = GetComponent<AIBehaviorManager>();
+        behaviorManager = GetComponent<AIbehaviorManager>();
     }
 
     public virtual void Activate()
     {
         isActive = true;
+        behaviorManager.SetAgentMaterial(colorState);
     }
 
     public virtual void Deactivate()

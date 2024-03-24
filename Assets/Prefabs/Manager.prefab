@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3236975016785658530
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5341791297305804779}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5341791297305804779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3236975016785658530}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4330046747468929757}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5247473967763380655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4330046747468929757}
+  - component: {fileID: 2133161971365763519}
+  - component: {fileID: 5216418697086592137}
+  - component: {fileID: 451037714211812415}
+  - component: {fileID: 2621360826580037857}
+  m_Layer: 0
+  m_Name: AIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4330046747468929757
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247473967763380655}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5341791297305804779}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2133161971365763519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247473967763380655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e0ced32ef8951e43aea60728ed7ce9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Behaviors:
+  - {fileID: 5216418697086592137}
+  - {fileID: 2621360826580037857}
+  - {fileID: 451037714211812415}
+  playerTransform: {fileID: 0}
+  playerLastKnownLocation: {x: 0, y: 0, z: 0}
+  soundSourcePosition: {x: 0, y: 0, z: 0}
+  agent: {fileID: 0}
+  agentMaterial: {fileID: 2100000, guid: a0059d703daa00345b178bedebd8d7be, type: 2}
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &5216418697086592137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247473967763380655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4ea6c63dc2b7a49a4a8ace987f28ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviorID: Patrol
+  colorState: {r: 0, g: 1, b: 0.048674583, a: 1}
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &451037714211812415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247473967763380655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb04e1e163b547409493864e62fcfc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviorID: Chase
+  colorState: {r: 1, g: 0.23993567, b: 0, a: 1}
+--- !u!114 &2621360826580037857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247473967763380655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55e48cc93f3973439101f045601842f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviorID: Sound
+  colorState: {r: 0.3443396, g: 1, b: 0.8644784, a: 1}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
