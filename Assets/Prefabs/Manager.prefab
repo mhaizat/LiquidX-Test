@@ -110,9 +110,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &451037714211812415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorID: Sound
-  colorState: {r: 0.3443396, g: 1, b: 0.8644784, a: 1}
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  colorState: {r: 0.8652886, g: 0.8867924, b: 0.15477037, a: 1}
