@@ -8,7 +8,6 @@ public class AISoundDetectionBehavior : AIBehaviorBase
         if (isActive)
         {
             if (Vector3.Distance(agent.transform.position, behaviorManager.GetSoundSourcePosition()) <= agent.stoppingDistance && !agent.pathPending)
-            //if (agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending)
             {
                 behaviorManager.SetBehaviorState("Patrol");
                 return;
