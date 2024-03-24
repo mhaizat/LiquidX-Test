@@ -51,7 +51,6 @@ public class PlayerMovement : MonoBehaviour
             if (GlobalVariable._isGuardInProximity)
             {
                 
-                Debug.Log("in proximity");
                 Vector3 playerDirection = transform.position - behaviorManager.GetAgent().transform.position;
                 float distanceToPlayer = playerDirection.magnitude;
                 playerDirection.Normalize();
@@ -59,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(behaviorManager.GetAgent().transform.position, playerDirection, out hit, distanceToPlayer, obstacleMask))
                 {
-                    Debug.Log("blocked");
                     return;
                 }
 
