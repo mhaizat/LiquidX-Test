@@ -3,8 +3,6 @@ using UnityEngine.AI;
 
 public class AISoundDetectionBehavior : AIBehaviorBase
 {
-    [SerializeField] private LayerMask obstacleLayer;
-
     public override void UpdateBehavior(NavMeshAgent agent)
     {
         if (isActive)

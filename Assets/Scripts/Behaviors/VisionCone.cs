@@ -14,7 +14,6 @@ public class VisionCone : MonoBehaviour
     private Mesh mesh;
     [SerializeField] private Material material;
 
-    [SerializeField] private LayerMask obstacleMask;
     [SerializeField] private LayerMask playerMask;
 
     void Start()
@@ -47,7 +46,7 @@ public class VisionCone : MonoBehaviour
         {
             Vector3 dir = Quaternion.Euler(0, angle, 0) * transform.forward;
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, dir, out hit, viewDistance, obstacleMask | playerMask))
+            if (Physics.Raycast(transform.position, dir, out hit, viewDistance, behaviorManager.GetObstacleLayerMask() | playerMask))
             {
                 vertices[i + 1] = transform.InverseTransformPoint(hit.point);
             }
@@ -82,7 +81,7 @@ public class VisionCone : MonoBehaviour
             if (angleToPlayer <= viewAngle / 2f)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, playerDirection, out hit, viewDistance, obstacleMask | playerMask))
+                if (Physics.Raycast(transform.position, playerDirection, out hit, viewDistance, behaviorManager.GetObstacleLayerMask() | playerMask))
                 {
                     if (hit.collider.CompareTag("Player"))
                     {

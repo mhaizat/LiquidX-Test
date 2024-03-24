@@ -46,9 +46,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.F))
         {
+            audioSource.PlayOneShot(soundEffectClip);
+            
             if (GlobalVariable._isGuardInProximity)
             {
-                audioSource.PlayOneShot(soundEffectClip);
                 
                 Vector3 playerDirection = transform.position - behaviorManager.GetAgent().transform.position;
                 float distanceToPlayer = playerDirection.magnitude;

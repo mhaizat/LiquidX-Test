@@ -8,8 +8,6 @@ public class AIPatrolBehavior : AIBehaviorBase
     private int currentWaypointIndex = 0;
     private float waitUntilNextWaypoint = 0;
 
-    [SerializeField] private LayerMask obstacleLayer;
-
     public override void Activate()
     {
         base.Activate();
