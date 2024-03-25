@@ -37,12 +37,11 @@ Player Collider Detection
 
 Time taken: Roughly around 15mins.
 
-Note: For the rest of the remaining hours, I went on to test, doing research, and setting/updating the scene.
+Note: For the rest of the remaining hours, I went on to doing tests, research, and setting/updating the scene.
 
 Things that I wish to polish
-I'd say I prefer to polish on the change states of each behavior. I notice that the AI quickly changes the state without any delay, that could be a problem if I were to expand the behaviors. I believe having like a delay
-in between the change would make it cleaner.
-If I were to given more time. I would make like a tool system for the AI system where other developers would just like press a button and a new behavior would exist in the project and automatically be added to the behavior list. All that developer has to do is to just implement the logic aspect of the new behavior.
+- I'd say I prefer to polish on the change states of each behavior. I notice that the AI quickly changes the state without any delay, that could be a problem if I were to expand the behaviors. I believe having like a delay in between the change would make it cleaner.
+- If I were to given more time, I would make like a tool system for the AI system where other developers would just like press a button and a new behavior would exist in the project and automatically be added to the behavior list. All that developer has to do is to just implement the logic aspect of the new behavior.
 
 Issues
 - Determining the proper way of changing states and how the behavior acts with each other. I know I mentioned that it took only 1 hour but I struggled quite a bit to understand what the base class needed at first.
