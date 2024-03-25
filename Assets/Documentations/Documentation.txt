@@ -1,0 +1,53 @@
+AI Stealth Game
+
+The AI Stealth Game consists of an AI and a player. The existence of the player is to test out the AI's behavior and how it behave from one another.
+
+AIBehaviorManager
+- I implemented this manager with the thought process of storing any references that the AI needs to use rather than storing it in individual behaviors.
+Example would be the player's transform, the last position of the player and also layer masks. The AIBehaviorManager also is responsible for changing and getting the behavior state. Same reason for the references.
+A single point of reference so to speak.
+
+Time taken: this was one of the most if not the most time taken to implement as I value it to the most important as it is sort of a bridge between behaviors. Approximately 5 hours since I had to revisit this from time to time to update the references that the behavior needs.
+
+AIBehaviorBase
+- The base class is responsible as a base for behaviors. I added in an Activate, Deactivate and UpdateBehaviors methods in the base class. The Activate and Deactivate methods are there to cleanly
+change between each behaviors. The UpdateBehavior method is to hold each behavior's logic and gets called after that behavior is activated. 
+
+Time taken: I didnt take much time on this, I'd say 1 hour, since all it does is to just activate, deactivate, and a method for the logic of the behavior.
+
+Behaviors
+- Patrol: The Patrol behavior has a list of waypoints that the AI needs to go and I have a method that cycles through the list and have the AI move along the path using the it.
+- Chase: The sole purpose of the chase behavior is to have the AI chase the last known player location if the player is detected via vision in front of the AI
+- Sound Detection: The sound detection behavior enables the AI to go to the location on where the player releases sound via F key. It first checks if there is an obstacle in between the player and the AI. if there is no obstacle, then go to the location.
+
+Time taken: I probably had to take up to 5 hours in total due to the issues I faced when trying to make individual behaviors act with each other as a whole.
+
+Vision Cone
+- The vision cone's purpose is to have a visual cone in front of the AI that acts as vision for it. My thought process while creating this, is to incorporate the vision detection for the AI as well.
+
+Time taken: This section took quite a while as I found myself looking things up on Google since I am not well versed in creating raycasts and visualing it in run time. Probably 3 hours.
+
+Player Movement
+- This section only consists of player movement logic and the F key logic. I wanted to do a simple movement that enables the player to interact with the AI.
+
+Time taken: Probably one hour.
+
+Player Collider Detection
+- The collider purpose is to detect is the AI is in proximity or not. This was pretty straight forward.
+
+Time taken: Roughly around 15mins.
+
+Note: For the rest of the remaining hours, I went on to test, doing research, and setting/updating the scene.
+
+Things that I wish to polish
+I'd say I prefer to polish on the change states of each behavior. I notice that the AI quickly changes the state without any delay, that could be a problem if I were to expand the behaviors. I believe having like a delay
+in between the change would make it cleaner.
+If I were to given more time. I would make like a tool system for the AI system where other developers would just like press a button and a new behavior would exist in the project and automatically be added to the behavior list. All that developer has to do is to just implement the logic aspect of the new behavior.
+
+Issues
+- Determining the proper way of changing states and how the behavior acts with each other. I know I mentioned that it took only 1 hour but I struggled quite a bit to understand what the base class needed at first.
+- My lack of knowledge when it comes to creating the vision cone. It took some time for me to incorporate the layer mask as well in the vision cone class.
+- My indecisiveness between to create a vision behavior of its own or to incorporate the vision detection in the vision cone. But ultimately, I thought having its own class does not serve any purpose since it would cause problems with Patrol behavior.
+
+Blockers
+- I understand blockers as something that restricts us from doing work such as no workspace, no Unity installed in the PC so on. So based on this understanding, I didn't have any blockers upon doing the test.
